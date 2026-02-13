@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const milestones = [
   {
     icon: "🌐",
-    title: "The Day We Met Online",
+    title: "The Day We Met",
     message: "What started as just another online conversation turned into the best decision of my life.",
   },
   {
@@ -13,14 +13,14 @@ const milestones = [
     message: "From random chats to 'don't sleep yet' conversations. Every night with you felt like a dream I never wanted to wake up from.",
   },
   {
-    icon: "😴",
-    title: "The Sleep Queen Era",
-    message: "The girl who says she's not sleepy and then disappears in 2 minutes. You're adorable, even when you're unconscious. 👑",
+    icon: "🤱",
+    title: "The Mommy Era",
+    message: "Seeing you care for everyone around you with such warmth and love. You're going to be the most amazing mom one day.",
   },
   {
-    icon: "🍳",
-    title: "The MasterChef Moment",
-    message: "The only person who can cook and still look cute doing it. One day I'll proudly say my girlfriend makes the best food.",
+    icon: "👗",
+    title: "The Fashionista",
+    message: "You have an impeccable sense of style. You shine in everything you wear, and I love seeing you express yourself.",
   },
   {
     icon: "✈️",
