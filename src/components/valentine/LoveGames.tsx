@@ -11,12 +11,7 @@ const quizQuestions = [
   {
     q: "Who falls asleep faster?",
     options: ["Vauldan", "Shevellie (Sleep Queen 👑)"],
-    correct: 1,
-  },
-  {
-    q: "Where did we meet?",
-    options: ["School", "Online", "Coffee shop", "Through friends"],
-    correct: 1,
+    correct: 0,
   },
   {
     q: "What's my favorite thing about our late night talks?",
@@ -293,11 +288,10 @@ const LoveGames = () => {
         {games.map((g, i) => (
           <button
             key={i}
-            className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all ${
-              activeGame === i
+            className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all ${activeGame === i
                 ? "bg-primary text-primary-foreground glow-rose"
                 : "glass text-foreground"
-            }`}
+              }`}
             onClick={() => setActiveGame(i)}
           >
             {g.title}
