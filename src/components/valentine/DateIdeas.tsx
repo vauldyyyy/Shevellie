@@ -47,9 +47,9 @@ const DateIdeas = () => {
                 </div>
 
                 <motion.button
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-rose-400 to-orange-400 text-white font-semibold shadow-lg hover:shadow-orange-400/20"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    className="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 text-amber-100 font-bold text-lg shadow-xl cursor-pointer hover:shadow-pink-500/30 border border-white/20"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={generateIdea}
                 >
                     Generate Idea ✨
