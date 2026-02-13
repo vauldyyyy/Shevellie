@@ -18,7 +18,7 @@ const milestones = [
     icon: "🤱",
     title: "The Mommy Era",
     message: "Seeing you care for everyone around you with such warmth and love. You're going to be the most amazing mom one day.",
-    image: "/images/mommy.jpeg",
+    image: "/images/mom.jpeg",
   },
   {
     icon: "👗",
@@ -53,7 +53,7 @@ const Timeline = () => {
       >
         From A Random Message To My Favorite Person 💕
       </motion.h2>
-      <p className="text-center text-muted-foreground mb-12">Our love story, one chapter at a time</p>
+      <p className="text-center text-muted-foreground mb-12">Everything I ever looked for, all wrapped into one person.</p>
 
       <div className="relative">
         {/* Vertical line */}
