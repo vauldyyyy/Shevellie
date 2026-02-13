@@ -6,31 +6,37 @@ const milestones = [
     icon: "🌐",
     title: "The Day We Met",
     message: "What started as just another online conversation turned into the best decision of my life.",
+    image: "/images/first.jpeg",
   },
   {
     icon: "💬",
     title: "The Late Night Talks",
     message: "From random chats to 'don't sleep yet' conversations. Every night with you felt like a dream I never wanted to wake up from.",
+    image: "/images/sleep.jpeg",
   },
   {
     icon: "🤱",
     title: "The Mommy Era",
     message: "Seeing you care for everyone around you with such warmth and love. You're going to be the most amazing mom one day.",
+    image: "/images/mommy.jpeg",
   },
   {
     icon: "👗",
     title: "The Fashionista",
     message: "You have an impeccable sense of style. You shine in everything you wear, and I love seeing you express yourself.",
+    image: "/images/fashion.jpeg",
   },
   {
     icon: "✈️",
     title: "The Travel Dreams",
     message: "One day, we're going to explore the world together. Paris, Bali, Tokyo — anywhere with you is paradise.",
+    image: "/images/travel.jpeg",
   },
   {
     icon: "❤️",
     title: "Almost Seven Months",
     message: "And somehow every day with you still feels new. Seven months may not sound like forever, but with you, it feels like the start of something that is.",
+    image: "/images/7.jpeg",
   },
 ];
 
@@ -92,10 +98,13 @@ const Timeline = () => {
                       className="overflow-hidden"
                     >
                       <p className="text-muted-foreground mt-3 leading-relaxed">{m.message}</p>
-                      <div className="mt-4 h-40 rounded-xl bg-secondary/50 flex items-center justify-center text-4xl">
-                        📸
+                      <div className="mt-4 rounded-xl overflow-hidden bg-secondary/50">
+                        <img
+                          src={m.image}
+                          alt={m.title}
+                          className="w-full h-auto object-cover"
+                        />
                       </div>
-                      <p className="text-xs text-muted-foreground text-center mt-2">Upload your photo here</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
