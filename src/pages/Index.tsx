@@ -13,6 +13,9 @@ import MusicToggle from "@/components/valentine/MusicToggle";
 import DarkModeToggle from "@/components/valentine/DarkModeToggle";
 import EasterEgg from "@/components/valentine/EasterEgg";
 import ILoveYouLanguages from "@/components/valentine/ILoveYouLanguages";
+import ReasonsWhy from "@/components/valentine/ReasonsWhy";
+import MusicPlayer from "@/components/valentine/MusicPlayer";
+import DateIdeas from "@/components/valentine/DateIdeas";
 
 const Index = () => {
   const [entered, setEntered] = useState(false);
@@ -31,11 +34,14 @@ const Index = () => {
           <EasterEgg />
 
           <CountdownTimer />
+          <MusicPlayer />
           <ILoveYouLanguages />
           <Timeline />
+          <ReasonsWhy />
           <LoveGames />
           <Gallery />
           <LoveLetters />
+          <DateIdeas />
           <FutureSection />
           <FinalSurprise />
 
