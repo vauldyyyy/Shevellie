@@ -2,12 +2,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const photos = [
-  { id: 1, caption: "Our first photo together 📸" },
-  { id: 2, caption: "That smile that makes my day ☀️" },
-  { id: 3, caption: "Late night adventures 🌙" },
-  { id: 4, caption: "Your MasterChef moment 🍳" },
-  { id: 5, caption: "Just being us 💕" },
-  { id: 6, caption: "My favorite person 💖" },
+  { id: 1, src: "/images/WhatsApp Image 2026-02-13 at 10.40.42 PM - Copy.jpeg" },
+  { id: 2, src: "/images/WhatsApp Image 2026-02-13 at 10.40.43 PM.jpeg" },
+  { id: 3, src: "/images/WhatsApp Image 2026-02-13 at 10.40.43 qqqqqqPM.jpeg" },
+  { id: 4, src: "/images/WhatsApp Image 2026-02-13 at 10.41.21 PM.jpeg" },
+  { id: 5, src: "/images/WhatsApp Image 2026-02-13 at 10.42.07 PM.jpeg" },
+  { id: 6, src: "/images/WhatsApp Image 2026-02-13 at 10.qqqqqqqq40.43 PM.jpeg" },
 ];
 
 const Gallery = () => {
@@ -38,15 +38,16 @@ const Gallery = () => {
           >
             <div className="relative rounded-2xl overflow-hidden glass transition-shadow hover:glow-rose">
               <div
-                className="w-full bg-secondary/50 flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-500"
+                className="w-full bg-secondary/50 group-hover:scale-110 transition-transform duration-500"
                 style={{ height: `${180 + (i % 3) * 60}px` }}
               >
-                📷
+                <img
+                  src={photo.src}
+                  alt="Gallery moment"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <p className="absolute bottom-3 left-3 right-3 text-primary-foreground text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                {photo.caption}
-              </p>
             </div>
           </motion.div>
         ))}
@@ -63,25 +64,24 @@ const Gallery = () => {
             onClick={() => setSelected(null)}
           >
             <motion.div
-              className="glass rounded-3xl max-w-lg w-full p-6"
+              className="glass rounded-3xl max-w-lg w-full p-2 overflow-hidden"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="h-64 rounded-2xl bg-secondary/50 flex items-center justify-center text-6xl mb-4">
-                📷
+              <div className="w-full h-auto rounded-2xl overflow-hidden">
+                <img
+                  src={photos.find((p) => p.id === selected)?.src}
+                  alt="Gallery moment huge"
+                  className="w-full h-auto max-h-[80vh] object-contain"
+                />
               </div>
-              <p className="text-center text-foreground font-script text-xl">
-                {photos.find((p) => p.id === selected)?.caption}
-              </p>
-              <p className="text-center text-xs text-muted-foreground mt-2">
-                Upload your real photo to replace this placeholder 💕
-              </p>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
     </section>
   );
 };
